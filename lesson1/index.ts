@@ -9,14 +9,9 @@
     "Ngọc",
   ];
 }
-
-
 const myString: string = "Hom nay troi dep qua!";
 console.log(myString.toLowerCase());
 console.log(myString.toLocaleUpperCase());
-
-
-
 type user = {
   name: string;
   age: number;
