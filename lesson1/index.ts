@@ -1,16 +1,21 @@
-const teachers: string[] = [
-  "Tú",
-  "Thắng",
-  "Đạt",
-  "Hoàng",
-  "Huy",
-  "Hoà",
-  "Ngọc",
-];
+{
+  const teachers: string[] = [
+    "Tú",
+    "Thắng",
+    "Đạt",
+    "Hoàng",
+    "Huy",
+    "Hoà",
+    "Ngọc",
+  ];
+}
+
 
 const myString: string = "Hom nay troi dep qua!";
 console.log(myString.toLowerCase());
 console.log(myString.toLocaleUpperCase());
+
+
 
 type user = {
   name: string;
