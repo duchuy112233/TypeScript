@@ -10,12 +10,16 @@ const mySkills: string[] = ["HTML", "CSS", "JS", "React", "NodeJS", "MongoDB"]; 
 
 const myJobs: Array<string> = ["developer", "teacher", "grab dirver"]; // Generic array type
 
-const myEducation: {
+
+type educationType = {
   school: string;
   major: string;
   graduatedYear: number;
   GPA: number;
-} = {
+} 
+
+
+const myEducation: educationType ={
   school: "FPOLY",
   major: "IT",
   graduatedYear: 2024,
