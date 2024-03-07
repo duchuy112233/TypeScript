@@ -1,4 +1,7 @@
 1. Cài đặt ts và ts-node
+```
+1. Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+2. npm i -g typescript ts-node ts-lib @types/node
 
 ```
 tsc -v
