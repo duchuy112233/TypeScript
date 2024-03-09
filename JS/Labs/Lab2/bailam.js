@@ -1,19 +1,6 @@
+"use strict";
 {
-  type productType = {
-    id: number;
-    title: string;
-    description: string;
-    price: number;
-    discountPercentage: number;
-    rating: number;
-    stock: number;
-    brand: string;
-    category: string;
-    thumbnail: string;
-    images: string[];
-  };
-
-  const product: productType = {
+  const product = {
     id: 1,
     title: "iPhone 9",
     description: "An apple mobile which is nothing like apple",
@@ -33,79 +20,9 @@
     ],
   };
 }
-
 //////////////////////////////////////////////////////////////////////////////////////////////////
-
 {
-  type hairType = {
-    color: string;
-    type: string;
-  };
-
-  type addressType = {
-    address: string;
-    city: string;
-    coordinates: {
-      lat: number;
-      lng: number;
-    };
-    postalCode: string;
-    state: string;
-  };
-
-  type companyType = {
-    address: addressType;
-    department: string;
-    name: string;
-    title: string;
-  };
-
-  type cryptoType = {
-    coin: string;
-    wallet: string;
-    network: string;
-  };
-
-  type bankType = {
-    cardExpire: string;
-    cardNumber: string;
-    cardType: string;
-    currency: string;
-    iban: string;
-  };
-
-  type userType = {
-    id: number;
-    firstName: string;
-    lastName: string;
-    maidenName: string;
-    age: number;
-    gender: "male" | "female" | "other";
-    email: string;
-    phone: string;
-    username: string;
-    password: string;
-    birthDate: string;
-    image: string;
-    bloodGroup: string;
-    height?: number;
-    weight?: number;
-    eyeColor?: string;
-    hair?: hairType;
-    domain: string;
-    ip: string;
-    address: addressType;
-    macAddress: string;
-    university: string;
-    bank: bankType;
-    company: companyType;
-    ein: string;
-    ssn: string;
-    userAgent: string;
-    crypto: cryptoType;
-  };
-
-  const user: userType = {
+  const user = {
     id: 1,
     firstName: "Terry",
     lastName: "Medhurst",
