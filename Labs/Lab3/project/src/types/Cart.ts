@@ -9,7 +9,7 @@ export type productCart = {
   thumbnail: string
 }
 
-export type cartType = {
+export type Cart = {
   id: number
   products: productCart[]
   total: number

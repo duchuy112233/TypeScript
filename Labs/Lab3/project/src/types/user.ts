@@ -30,13 +30,13 @@ export type bankType = {
   currency: string
   iban: string
 }
-export type userType = {
+export type User = {
   id: number
   firstName: string
   lastName: string
   maidenName: string
   age: number
-  gender: 'male' | 'female' | 'other'
+  gender: 'male' | 'female' | 'other' // literal export type - union export type
   email: string
   phone: string
   username: string
