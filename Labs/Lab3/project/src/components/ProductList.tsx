@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import instance from '../apis'
 import { Product } from '../types/Product'
 
@@ -6,19 +6,13 @@ const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([])
 
   useEffect(() => {
-    // fetch('http://localhost:3000/products/1')
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(product)
-    //     setProduct(data)
-    //   })
-    ;(async () => {
+    const getProducts = async () => {
       const { data } = await instance.get('/products')
       console.log(data)
       setProducts(data)
-    })()
+    }
+    getProducts()
   }, [])
-
   return (
     <>
       {products.map((product) => (
@@ -44,11 +38,10 @@ const ProductList = () => {
                 <div className='sold text-xs text-[#787878]'>Đã bán 1000+</div>
               </div>
               <div className='price color-price flex items-center text-red-500 text-[20px]'>
-                <span>{product.price}</span> ₫<div className='ml-2 text-xs border border-red-500  bg-[#FFF0F1]'>-23%</div>
+                <span>{product.price}</span> ₫
+                <div className='ml-2 text-xs border border-red-500  bg-[#FFF0F1]'>-23%</div>
               </div>
               <div className='text-red-500 slogan color-price flex relative mt-1'>
-              
-               
                 <p className='uppercase text-xs pl-1'>Xếp hạng: {product.rating} Sao</p>
               </div>
             </div>
