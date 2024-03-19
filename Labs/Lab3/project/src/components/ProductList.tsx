@@ -42,7 +42,7 @@ const ProductList = () => {
                 <div className='ml-2 text-xs border border-red-500  bg-[#FFF0F1]'>-23%</div>
               </div>
               <div className='text-red-500 slogan color-price flex relative mt-1'>
-                <p className='uppercase text-xs pl-1'>Xếp hạng: {product.rating} Sao</p>
+                <p className='uppercase text-xs pl-1'>Xếp hạng: {product.rating}</p>
               </div>
             </div>
           </div>
