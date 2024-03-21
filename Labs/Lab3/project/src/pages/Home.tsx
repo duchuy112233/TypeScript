@@ -1,9 +1,9 @@
 import ProductList from '../components/ProductList'
 import Banner from '~/components/Banner'
 
-interface Props {}
 
-const Home = (props: Props) => {
+
+const Home = () => {
   return (
     <>
       <Banner />

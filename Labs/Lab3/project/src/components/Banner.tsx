@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 const images = [
   'https://www.sneakerbaas.com/cdn/shop/collections/Brand_banner_NIKE_462543bb-f65a-4fea-852a-60bf2015b8b9.jpg?v=1668086262',

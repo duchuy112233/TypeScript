@@ -1,16 +1,23 @@
 import { useEffect, useState } from 'react'
 import instance from '../apis'
 import { Product } from '../types/Product'
+import { Link } from 'react-router-dom'
+
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([])
 
   useEffect(() => {
     const getProducts = async () => {
-      const { data } = await instance.get('/products')
-      console.log(data)
-      setProducts(data)
+      try {
+        const { data } = await instance.get('/products')
+        console.log(data)
+        setProducts(data)
+      } catch (error) {
+        console.log(error)
+      }
     }
+
     getProducts()
   }, [])
   return (
@@ -18,14 +25,14 @@ const ProductList = () => {
       {products.map((product) => (
         <div key={product.id}>
           <div className='item-product px-5 pt-[13px] pb-[26px] h-[317px] flex flex-col justify-between'>
-            <a href='#'>
+            <Link to={`/shop/${product.id}`}>
               <img src={product.thumbnail} alt={product.title} className='max-w-[200px] max-h-[200px]' />
-            </a>
+            </Link>
 
             <div className='info-product'>
-              <a href='#'>
+              <Link to={`/shop/${product.id}`}>
                 <h3 className='color-text text-[20px]'>{product.title}</h3>
-              </a>
+              </Link>
               <div className='reviews flex items-center my-[6px]'>
                 <div className='starts text-xs'>
                   <i className='fa-solid fa-star'></i>
