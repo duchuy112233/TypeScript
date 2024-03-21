@@ -45,6 +45,12 @@ const Header = () => {
                   Register{' '}
                 </NavLink>
               </li>
+              <li>
+                <NavLink className='text-gray-500 transition hover:text-gray-500/75 font-semibold' to='/about'>
+                  {' '}
+                  About{' '}
+                </NavLink>
+              </li>
             </ul>
           </nav>
           {/* Tìm kiếm */}
