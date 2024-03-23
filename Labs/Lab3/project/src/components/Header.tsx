@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 const Header = () => {
   return (
+    
     <header className='bg-white'>
       <div className='mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8'>
         {/* Logo */}
@@ -87,6 +88,9 @@ const Header = () => {
         </div>
       </div>
       <hr />
+
+
+     
     </header>
   )
 }
