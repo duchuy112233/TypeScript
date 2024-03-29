@@ -54,11 +54,7 @@ export default App;
   <Header />
   <main className="mt-8 bg-white color-text mt-24">
     <div className="max-w-screen-xl mx-auto pt-[14px] flex pb-16">
-      <div className="content grow">
-
-
-		
-	  </div>
+      <div className="content grow"></div>
     </div>
   </main>
   <Footer />
