@@ -1,22 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import instance from '~/apis'
+import { getProduct } from '~/apis/product'
 import { Product } from '~/types/Product'
 
 const ProductDetail = () => {
   const { id } = useParams()
   const [product, setProduct] = useState<Product | null>(null)
-  useEffect(() => {
-    const getProduct = async () => {
-      try {
-        const { data } = await instance.get(`/products/${id}`)
-        setProduct(data)
-      } catch (error) {
-        setProduct(null)
-      }
-    }
 
-    getProduct()
+  useEffect(() => {
+    ;(async () => {
+      const data = await getProduct(+id!)
+      setProduct(data)
+    })()
   }, [])
 
   return (
@@ -35,9 +30,13 @@ const ProductDetail = () => {
 
           <div>
             <h1 className='text-2xl font-bold mb-4'>{product.title}</h1>
-            <p className='text-gray-600 mb-2 flex font-bold gap-1'>Price: <p className='text-red-500 '>{product.price} VNĐ</p> </p>
+            <p className='text-gray-600 mb-2 flex font-bold gap-1'>
+              Price: <p className='text-red-500 '>{product.price} VNĐ</p>{' '}
+            </p>
             <p className='text-gray-700 mb-4'>Rating: {product.rating}</p>
-            <button className='bg-red-500 hover:bg-red-700 text-white font-bold mt-[160px] py-2 px-4 rounded'>Mua hàng</button>
+            <button className='bg-red-500 hover:bg-red-700 text-white font-bold mt-[160px] py-2 px-4 rounded'>
+              Mua hàng
+            </button>
           </div>
         </>
       ) : (

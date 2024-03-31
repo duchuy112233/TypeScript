@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 //
 
-import { createProduct, getProducts } from './apis/product'
+import { createProduct, getProducts, updateProduct, removeProduct } from './apis/product'
 import { useEffect, useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 //
@@ -15,9 +15,9 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 import Dashboard from './pages/admin/Dashboard'
 import ProductAdd from './pages/admin/ProductAdd'
+import ProductEdit from './pages/admin/ProductEdit'
 
 const App = () => {
-  const navigate = useNavigate()
   ///// Hiển thị
   const [products, setProducts] = useState<Product[]>([])
   useEffect(() => {
@@ -26,13 +26,32 @@ const App = () => {
       setProducts(data)
     })()
   }, [])
-  /////
+  ///// add
+  const navigate = useNavigate()
   const handleAddProduct = (product: Product) => {
     ;(async () => {
       const data = await createProduct(product)
       setProducts([...products, data])
     })()
     navigate('/admin')
+  }
+  // edit
+  const handleEditProduct = (product: Product) => {
+    ;(async () => {
+      const data = await updateProduct(product)
+      setProducts(products.map((p) => (p.id === data.id ? data : p)))
+    })()
+    navigate('/admin')
+  }
+  // delete
+  const handleDeleteProduct = (id: number | undefined) => {
+    ;(async () => {
+      const isConfirm = window.confirm('Bạn có chắc chắn muốn xoá sản phẩm này?')
+      if (isConfirm) {
+        await removeProduct(`${id}`)
+        setProducts(products.filter((i) => i.id !== id))
+      }
+    })()
   }
   return (
     <>
@@ -42,20 +61,22 @@ const App = () => {
           <div className='content grow'>
             <Routes>
               {/* // */}
-              <Route index element={<Home products={products} />} />
-              <Route path='/shop' element={<Shop />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/shop/:id' element={<ProductDetail />} />
+              <Route path='/'>
+                <Route index element={<Home products={products} />} />
+                <Route path='/shop' element={<Shop />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/shop/:id' element={<ProductDetail />} />
+              </Route>
 
               {/* admin */}
               <Route path='/admin'>
-                <Route index element={<Dashboard products={products} />} />
                 <Route path='/admin/add' element={<ProductAdd onAdd={handleAddProduct} />} />
+                <Route path='/admin/edit/:id' element={<ProductEdit onEdit={handleEditProduct} />} />
+                <Route path='/admin' element={<Dashboard products={products} onDel={handleDeleteProduct} />} />
               </Route>
 
               {/* /404/ */}
               <Route path='*' element={<NotFound />} />
-              {/* // */}
             </Routes>
           </div>
         </div>

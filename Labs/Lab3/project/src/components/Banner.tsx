@@ -1,10 +1,10 @@
 import  { useState, useEffect } from 'react';
 
 const images = [
-  'https://www.sneakerbaas.com/cdn/shop/collections/Brand_banner_NIKE_462543bb-f65a-4fea-852a-60bf2015b8b9.jpg?v=1668086262',
-  'https://th.bing.com/th/id/R.67913347a422173a4325d2ccbcf1eaf5?rik=qDIcagC9KZbBeA&pid=ImgRaw&r=0',
-  'https://th.bing.com/th/id/OIP.YMrbO2XkzJGOmU6cbcE6_gHaDY?rs=1&pid=ImgDetMain',
-  'https://i.pinimg.com/originals/bd/98/35/bd983558d61361e66f41c5b9c622ea99.jpg',
+  'https://t4.ftcdn.net/jpg/04/95/28/65/360_F_495286577_rpsT2Shmr6g81hOhGXALhxWOfx1vOQBa.jpg',
+  'https://cdn.pixabay.com/photo/2015/11/19/08/52/banner-1050629_640.jpg',
+  'https://static.vecteezy.com/system/resources/thumbnails/000/701/690/small/abstract-polygonal-banner-background.jpg',
+  'https://static3.depositphotos.com/1000193/104/i/450/depositphotos_1048150-stock-photo-grunge-banner.jpg',
 ];
 
 const Banner = () => {
