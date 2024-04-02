@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom'
-
+//
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { Product } from '~/types/Product'
 import { joiResolver } from '@hookform/resolvers/joi'
-
-import schemaProduct from '~/validation/product'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+//
+import schemaProduct from '~/validation/product'
 import { getProduct } from '~/apis/product'
-
+import { Product } from '~/types/Product'
 type Props = {
   onEdit: (product: Product) => void
 }
@@ -65,7 +64,7 @@ const ProductEdit = ({ onEdit }: Props) => {
             id='price'
             defaultValue={product?.price as number}
             placeholder='Giá sản phẩm...'
-            {...register('price', { required: true, min: 0 })}
+            {...register('price', { required: true, minLength: 3 })}
           />
           {errors.price && <span className='text-red-500'>{errors.price.message}</span>}
         </div>
@@ -80,7 +79,7 @@ const ProductEdit = ({ onEdit }: Props) => {
             id='description'
             defaultValue={product?.description}
             placeholder='Mô tả sản phẩm ...'
-            {...register('description')}
+            {...register('description', { required: true, minLength: 5 })}
           />
         </div>
         {/* ảnh */}
@@ -95,7 +94,7 @@ const ProductEdit = ({ onEdit }: Props) => {
             id='thumbnail'
             defaultValue={product?.thumbnail}
             placeholder='Ảnh sản phẩm...'
-            {...register('thumbnail')}
+            {...register('thumbnail', { required: true, minLength: 5 })}
           />
         </div>
         <button type='submit' className='bg-blue-500 text-white py-2 px-4 rounded-md w-full'>

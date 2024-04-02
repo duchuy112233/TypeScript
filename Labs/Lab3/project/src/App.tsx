@@ -2,23 +2,24 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './pages/Home'
 //
-
 import { createProduct, getProducts, updateProduct, removeProduct } from './apis/product'
 import { useEffect, useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
-//
+
+//home, detail
 import { Product } from './types/Product'
 import ProductDetail from './pages/ProductDetail'
 //
 import Shop from './pages/Shop'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
+//admin
 import Dashboard from './pages/admin/Dashboard'
 import ProductAdd from './pages/admin/ProductAdd'
 import ProductEdit from './pages/admin/ProductEdit'
 
 const App = () => {
-  ///// Hiển thị
+  // Hiển thị
   const [products, setProducts] = useState<Product[]>([])
   useEffect(() => {
     ;(async () => {
@@ -26,7 +27,7 @@ const App = () => {
       setProducts(data)
     })()
   }, [])
-  ///// add
+  // add
   const navigate = useNavigate()
   const handleAddProduct = (product: Product) => {
     ;(async () => {
@@ -53,6 +54,7 @@ const App = () => {
       }
     })()
   }
+  //
   return (
     <>
       <Header />
