@@ -13,3 +13,9 @@ ts-node index.ts
 2. Cài đặt extension cho vscode
    code runner
    error lens
+
+
+
+....
+npm install joi
+npm install @hookform/resolvers
