@@ -15,7 +15,7 @@ const ProductDetail = () => {
   }, [])
 
   return (
-    <div className='flex gap-10'>
+    <div className='flex gap-10 '>
       {product ? (
         <>
           <div>

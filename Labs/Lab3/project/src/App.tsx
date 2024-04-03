@@ -1,13 +1,13 @@
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Home from './pages/Home'
+import { Product } from './types/Product'
 //
 import { createProduct, getProducts, updateProduct, removeProduct } from './apis/product'
 import { useEffect, useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 
 //home, detail
-import { Product } from './types/Product'
+import Home from './pages/Home'
 import ProductDetail from './pages/ProductDetail'
 //
 import Shop from './pages/Shop'
