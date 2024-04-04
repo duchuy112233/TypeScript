@@ -1,6 +1,5 @@
-type Props = {}
 
-const About = (props: Props) => {
+const About = () => {
   return (
     <>
       <div className='m-4'>

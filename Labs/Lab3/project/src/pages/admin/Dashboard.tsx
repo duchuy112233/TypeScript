@@ -3,13 +3,13 @@ import { Product } from '~/types/Product'
 
 type Props = {
   products: Product[]
-  onDel: (id: number | undefined) => void;
+  onDel: (id: number | undefined) => void
 }
 
-const Dashboard = ({ products,onDel }: Props) => {
+const Dashboard = ({ products, onDel }: Props) => {
   const handleDelete = (id: number | undefined) => {
-    onDel(id);
-  };
+    onDel(id)
+  }
   return (
     <>
       <h1 className='text-4xl text-center'>Hello, admin</h1>
@@ -43,10 +43,16 @@ const Dashboard = ({ products,onDel }: Props) => {
 
                 <td className=' px-4 py-2 text-gray-900'>{item.description}</td>
                 <td className='whitespace-nowrap px-4 py-2 text-gray-700'>
-                  <button onClick={() => handleDelete(Number(item.id))} className='btn btn-danger bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2'>
+                  <button
+                    onClick={() => handleDelete(Number(item.id))}
+                    className='btn btn-danger bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2'
+                  >
                     Delete
                   </button>
-                  <Link to={`/admin/edit/${item.id}`} className='bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded'>
+                  <Link
+                    to={`/admin/edit/${item.id}`}
+                    className='bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded'
+                  >
                     Edit
                   </Link>
                 </td>

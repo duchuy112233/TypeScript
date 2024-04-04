@@ -34,18 +34,6 @@ const Header = () => {
               </li>
 
               <li>
-                <NavLink className='text-gray-500 transition hover:text-gray-500/75 font-semibold' to='/login'>
-                  {' '}
-                  Login{' '}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className='text-gray-500 transition hover:text-gray-500/75 font-semibold' to='/register'>
-                  {' '}
-                  Register{' '}
-                </NavLink>
-              </li>
-              <li>
                 <NavLink className='text-gray-500 transition hover:text-gray-500/75 font-semibold' to='/about'>
                   {' '}
                   About{' '}
@@ -74,16 +62,22 @@ const Header = () => {
           </div>
           {/* ĐĂng nhập */}
           <div className='flex items-center gap-4'>
-            <div className='sm:flex sm:gap-4'>
-              <a
-                className='hidden rounded-md px-3 py-2.5 text-[20px] font-medium text-gray-600 transition hover:text-red-700 sm:block'
-                href='#'
+            <div className='sm:flex sm:gap-2'>
+              <NavLink
+                className='hidden rounded-md px-3 py-2.5 text-[14px] font-medium text-gray-600 transition hover:text-red-700 sm:block'
+                to='/register'
               >
-                <i className='fa-solid fa-user '></i>
-              </a>
+                Đăng ký
+              </NavLink>
+              <NavLink
+                className='hidden rounded-md px-3 py-2.5 text-[14px] font-medium text-gray-600 transition hover:text-red-700 sm:block'
+                to='/login'
+              >
+                Đăng Nhập
+              </NavLink>
 
               <a
-                className='hidden rounded-md px-3 py-2.5 text-[20px] font-medium text-gray-600 transition hover:text-red-700 sm:block'
+                className='hidden rounded-md px-3 py-2.5 text-[15px] font-medium text-gray-600 transition hover:text-red-700 sm:block'
                 href='#'
               >
                 <i className='fa-solid fa-cart-shopping'></i>

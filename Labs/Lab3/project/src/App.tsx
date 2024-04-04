@@ -5,18 +5,20 @@ import { Product } from './types/Product'
 import { createProduct, getProducts, updateProduct, removeProduct } from './apis/product'
 import { useEffect, useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
-
 //home, detail
 import Home from './pages/Home'
 import ProductDetail from './pages/ProductDetail'
 //
-import Shop from './pages/Shop'
+// import Shop from './pages/Shop'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
 //admin
 import Dashboard from './pages/admin/Dashboard'
 import ProductAdd from './pages/admin/ProductAdd'
 import ProductEdit from './pages/admin/ProductEdit'
+//
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 const App = () => {
   // Hiển thị
@@ -65,18 +67,19 @@ const App = () => {
               {/* // */}
               <Route path='/'>
                 <Route index element={<Home products={products} />} />
-                <Route path='/shop' element={<Shop />} />
+                {/* <Route path='/shop' element={<Shop />} /> */}
                 <Route path='/about' element={<About />} />
                 <Route path='/shop/:id' element={<ProductDetail />} />
               </Route>
-
               {/* admin */}
               <Route path='/admin'>
                 <Route path='/admin/add' element={<ProductAdd onAdd={handleAddProduct} />} />
                 <Route path='/admin/edit/:id' element={<ProductEdit onEdit={handleEditProduct} />} />
                 <Route path='/admin' element={<Dashboard products={products} onDel={handleDeleteProduct} />} />
               </Route>
-
+              {/* Login-Register */}
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />} />
               {/* /404/ */}
               <Route path='*' element={<NotFound />} />
             </Routes>

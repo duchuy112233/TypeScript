@@ -11,11 +11,9 @@ const ProductAdd = (props: Props) => {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<Product>(
-    {
-      resolver: joiResolver(schemaProduct)
-    }
-  )
+  } = useForm<Product>({
+    resolver: joiResolver(schemaProduct)
+  })
 
   const onSubmit: SubmitHandler<Product> = (data: Product) => {
     props.onAdd(data)
@@ -66,7 +64,6 @@ const ProductAdd = (props: Props) => {
             placeholder='Ảnh sản phẩm...'
             {...register('thumbnail')}
           />
-          
         </div>
         <button
           type='submit'

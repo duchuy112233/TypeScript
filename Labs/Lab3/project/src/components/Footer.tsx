@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className='bg-white'>
@@ -7,7 +6,11 @@ const Footer = () => {
         <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
           <div>
             <div className='text-teal-600'>
-            <img className='w-[150px]' src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Logo-FPT-Shop-Black.png" alt="" />
+              <img
+                className='w-[150px]'
+                src='https://upload.wikimedia.org/wikipedia/commons/1/1b/Logo-FPT-Shop-Black.png'
+                alt=''
+              />
               123456788
             </div>
 
