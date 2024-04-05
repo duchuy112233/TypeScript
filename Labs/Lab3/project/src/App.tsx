@@ -73,9 +73,9 @@ const App = () => {
               </Route>
               {/* admin */}
               <Route path='/admin'>
+                <Route path='/admin' element={<Dashboard products={products} onDel={handleDeleteProduct} />} />
                 <Route path='/admin/add' element={<ProductAdd onAdd={handleAddProduct} />} />
                 <Route path='/admin/edit/:id' element={<ProductEdit onEdit={handleEditProduct} />} />
-                <Route path='/admin' element={<Dashboard products={products} onDel={handleDeleteProduct} />} />
               </Route>
               {/* Login-Register */}
               <Route path='/login' element={<Login />} />
