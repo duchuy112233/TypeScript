@@ -2,6 +2,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { Product } from '~/types/Product'
 import schemaProduct from '~/validation/product'
 import { joiResolver } from '@hookform/resolvers/joi'
+
 type Props = {
   onAdd: (product: Product) => void
 }

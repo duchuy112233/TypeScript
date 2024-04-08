@@ -10,6 +10,7 @@ const ProductDetail = () => {
   useEffect(() => {
     ;(async () => {
       const data = await getProduct(+id!)
+      
       setProduct(data)
     })()
   }, [])
