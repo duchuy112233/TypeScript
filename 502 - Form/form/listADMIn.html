@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <>
+    <h1 className="text-4xl text-center">Hello, admin</h1>
+    <a  className="no-underline mb-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href=""></a>
+    <div className="overflow-x-auto mt-10">
+      <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+        <thead className="ltr:text-left rtl:text-right">
+          <tr>
+            <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              title
+            </th>
+            <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              price
+            </th>
+            <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              img
+            </th>
+            <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              desc
+            </th>
+            <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              action
+            </th>
+          </tr>
+        </thead>
+
+        <tbody className="divide-y divide-gray-200">
+       
+            <tr>
+              <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-center">
+                name
+              </td>
+              <td className="whitespace-nowrap px-4 py-2 text-gray-700 text-center">
+                price
+              </td>
+
+              <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center items-center">
+                <img
+                  className="max-w-full h-auto"
+                  width={140}
+                  src=''
+                  alt=""
+                />
+              </td>
+
+              <td className=" px-4 py-2 text-gray-900">mota</td>
+              <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                <button
+               
+                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2"
+                >
+                  Delete
+                </button>
+
+                  <Link
+                  to=''
+                  className='bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded'
+                >
+                  Edit
+                </Link>
+              </td>
+            </tr>
+  
+        </tbody>
+      </table>
+    </div>
+  </>
+
+
+  <Link
+  className="no-underline mb-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+  to="/admin/add"
+>
+  Add new product
+</Link>
+
+<a  className="no-underline mb-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href=""></a>
+
+
+   <button onClick={() => hendleDelete(Number(item.id))} 
+        className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2"> 
+        Delete 
+    </button>
+    <Link
+         to={`/admin/edit/${item.id}`}
+        className='bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded'>
+        Edit
+    </Link>
+</body>
+</html>
