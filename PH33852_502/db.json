@@ -1,0 +1,43 @@
+{
+  "products": [
+    {
+      "id": 5,
+      "title": "Huawei P30",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": 499,
+      "discountPercentage": 10.58,
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/5/1.jpg",
+        "https://cdn.dummyjson.com/product-images/5/2.jpg",
+        "https://cdn.dummyjson.com/product-images/5/3.jpg"
+      ]
+    },
+    {
+      "title": "tahahaha",
+      "price": 7777,
+      "description": "sản phẩm tốt",
+      "thumbnail": "https://savani.vn/images/products/2023/10/27/large/ao-thun-co-co-ngan-tay-MPC014S3-2-C03.jpg",
+      "id": 7
+    },
+    {
+      "title": "ao khoac",
+      "price": 450000,
+      "description": "Bạn là một người mới sử dụng điện thoại lần đầu, hoặc mới chuyển từ iPhone sang dùng điện thoại Android và được người quen khuyên nên mua điện thoại Samsung. Nhưng bạn vẫn còn đang băn khoăn không biết điện thoại Samsung là của nước nào? Có tốt không? Vì vậy, hãy cùng Siêu thị Điện Máy - Nội Thất Chợ Lớn đi giải đáp câu hỏi này nhé!",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+      "id": 8
+    },
+    {
+      "title": "ggg666",
+      "price": 888888,
+      "description": "đẹp chất lượng",
+      "thumbnail": "https://cdn.tgdd.vn/Products/Images/44/303499/msi-gaming-gf63-thin-11uc-i5-1230vn-thumb-600x600.jpg ",
+      "id": 9
+    }
+  ],
+  "users": []
+}

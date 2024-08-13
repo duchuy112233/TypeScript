@@ -1,0 +1,111 @@
+{
+  "products": [
+    {
+      "title": "iPhone X",
+      "price": 899000,
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/3/1.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "OPPOF19",
+      "description": "OPPO F19 is officially announced on April 2021.",
+      "price": 280,
+      "discountPercentage": 17.91,
+      "rating": 4.3,
+      "stock": 123,
+      "brand": "OPPO",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/4/1.jpg",
+        "https://cdn.dummyjson.com/product-images/4/2.jpg",
+        "https://cdn.dummyjson.com/product-images/4/3.jpg",
+        "https://cdn.dummyjson.com/product-images/4/4.jpg",
+        "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Huawei P30",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": 499,
+      "discountPercentage": 10.58,
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/5/1.jpg",
+        "https://cdn.dummyjson.com/product-images/5/2.jpg",
+        "https://cdn.dummyjson.com/product-images/5/3.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "MacBook Pro",
+      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+      "price": 1749,
+      "discountPercentage": 11.02,
+      "rating": 4.57,
+      "stock": 83,
+      "brand": "Apple",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/6/1.png",
+        "https://cdn.dummyjson.com/product-images/6/2.jpg",
+        "https://cdn.dummyjson.com/product-images/6/3.png",
+        "https://cdn.dummyjson.com/product-images/6/4.jpg"
+      ]
+    },
+    {
+      "title": "áo polo",
+      "price": 700,
+      "description": "đẹp chất lượng",
+      "thumbnail": "https://savani.vn/images/products/2023/10/27/large/ao-thun-co-co-ngan-tay-MPC014S3-2-C03.jpg",
+      "id": 7
+    },
+    {
+      "title": "ppdd",
+      "price": 777,
+      "description": "đẹp chất lượng",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "email": "quochungnhi@gmail.com",
+      "password": "$2a$10$.FBAFB.hEdG7i54sC0vhi.7JRptDXkpvQQLNLG6UE6Y.NOlMBxNZ2",
+      "id": 1
+    },
+    {
+      "email": "quochungnhi2@gmail.com",
+      "password": "$2a$10$LIpt2w9U6hscAWhtoMTFueE6xOVHl1yA/jynZvPik/3/r7x4BYwka",
+      "id": 2
+    },
+    {
+      "email": "quochun@gmail.com",
+      "password": "$2a$10$ipovJsX181KVbiW4E.hfCu5tRzv6P6B8xN4UQrs430eq/atEd7gDi",
+      "id": 3
+    }
+  ]
+}
